@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/modules.css">
 
@@ -96,22 +97,33 @@
             </script>
         </div>
         <div class="statistics__data col-sm-7">
-            <div class="container">
+            <div class="row">
                 <h3 class="text-center">Nyeri County</h3>
                 <ul class="nav nav-pills">
                     <li class="active"><a data-toggle="pill" href="#home">Forest</a></li>
-                    <li><a data-toggle="pill" href="#menu1">Forest Change</a></li>
+                    <li><a data-toggle="pill" href="#menu1">Forest Loss</a></li>
                     <li><a data-toggle="pill" href="#menu2">Regions</a></li>
                 </ul>
 
                 <div class="tab-content">
                     <div id="home" class="tab-pane fade in active">
-                        <h3>HOME</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <div class="tree__cover col-sm-5">
+                        <h3>Tree Cover In Nyeri</h3>
+                        <p>As of 2018, 38.03% of Nyeri was tree cover. The top 2 regions represent 64% of all tree cover. Othaya had the most relative tree cover at 61% compared to an average of 45%.</p>
+                        </div>
+                        <div class="tree__cover--graph col-sm-5">
+                            <div id="nyeriCover" style="width: 350px; height: 200px;"></div>
+                            <script type="text/javascript" src="js/nyeri-cover.js"></script>
+                        </div>
                     </div>
                     <div id="menu1" class="tab-pane fade">
-                        <h3>Menu 1</h3>
-                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <div class="tree__cover">
+                            <h3>Tree Cover Loss In Nyeri</h3>
+                            <p>From 2001 to 2016, Nyeri lost 3.96kha of tree cover, equivalent to a 2.3% decrease since 2000.</p>
+                            <p>In Nyeri, the top 6 regions were responsible for 100% of all tree cover loss between 2001 and 2016. Tetu had the most relative tree cover loss at 2.7% compared to an average of 2.1%.</p>
+                            <div id="drawChart2_div" style="width: 800px; height: 500px;"></div>
+                            <script type="text/javascript" src="js/nyeri-cover-loss.js"></script>
+                        </div>
                     </div>
                     <div id="menu2" class="tab-pane fade">
                         <h3>Menu 2</h3>

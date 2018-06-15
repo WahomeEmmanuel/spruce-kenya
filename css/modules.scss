@@ -17,28 +17,35 @@
       }
     }
 
-    @media screen and (max-width: 468px){
-      max-width: 300px !important;
-    }
+
 
   }
 
   .statistics__data{
-    background-color: blue;
+    background-color: #fff;
     padding: 0;
     height: 300px;
 
+    @media screen and (min-width: 768px){
+      padding-left: 30px;
+    }
+
     .container{
       .nav-pills{
-        a{
-          padding: 5px;
+        @media screen and (min-width: 768px){
+          padding-left: 16px;
+          padding-right: 16px;
         }
+      }
+      .tab-pane{
+          h3{
+            color: #056609;
+          }
       }
     }
 
     @media screen and (max-width: 468px){
       height: auto;
-      max-width: 300px;
     }
   }
 }

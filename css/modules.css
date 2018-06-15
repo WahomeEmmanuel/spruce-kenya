@@ -9,19 +9,22 @@
       .statistics .statistics__map .statistics__map--display canvas div {
         max-width: 400px !important;
         max-height: 400px !important; }
-  @media screen and (max-width: 468px) {
-    .statistics .statistics__map {
-      max-width: 300px !important; } }
 .statistics .statistics__data {
-  background-color: blue;
+  background-color: #fff;
   padding: 0;
   height: 300px; }
-  .statistics .statistics__data .container .nav-pills a {
-    padding: 5px; }
+  @media screen and (min-width: 768px) {
+    .statistics .statistics__data {
+      padding-left: 30px; } }
+  @media screen and (min-width: 768px) {
+    .statistics .statistics__data .container .nav-pills {
+      padding-left: 16px;
+      padding-right: 16px; } }
+  .statistics .statistics__data .container .tab-pane h3 {
+    color: #056609; }
   @media screen and (max-width: 468px) {
     .statistics .statistics__data {
-      height: auto;
-      max-width: 300px; } }
+      height: auto; } }
 
 .footer {
   padding: 10px; }
