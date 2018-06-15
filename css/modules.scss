@@ -1,0 +1,48 @@
+.statistics{
+
+  .statistics__map{
+    background-color: #fff;
+    padding: 0;
+    .statistics__map--display{
+      height: 300px;
+      background: grey;
+
+      canvas{
+        max-width: 400px !important;
+
+        div{
+          max-width: 400px !important;
+          max-height: 400px !important;
+        }
+      }
+    }
+
+    @media screen and (max-width: 468px){
+      max-width: 300px !important;
+    }
+
+  }
+
+  .statistics__data{
+    background-color: blue;
+    padding: 0;
+    height: 300px;
+
+    .container{
+      .nav-pills{
+        a{
+          padding: 5px;
+        }
+      }
+    }
+
+    @media screen and (max-width: 468px){
+      height: auto;
+      max-width: 300px;
+    }
+  }
+}
+
+.footer{
+  padding: 10px;
+}

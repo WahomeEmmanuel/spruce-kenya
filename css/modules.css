@@ -1,0 +1,29 @@
+.statistics .statistics__map {
+  background-color: #fff;
+  padding: 0; }
+  .statistics .statistics__map .statistics__map--display {
+    height: 300px;
+    background: grey; }
+    .statistics .statistics__map .statistics__map--display canvas {
+      max-width: 400px !important; }
+      .statistics .statistics__map .statistics__map--display canvas div {
+        max-width: 400px !important;
+        max-height: 400px !important; }
+  @media screen and (max-width: 468px) {
+    .statistics .statistics__map {
+      max-width: 300px !important; } }
+.statistics .statistics__data {
+  background-color: blue;
+  padding: 0;
+  height: 300px; }
+  .statistics .statistics__data .container .nav-pills a {
+    padding: 5px; }
+  @media screen and (max-width: 468px) {
+    .statistics .statistics__data {
+      height: auto;
+      max-width: 300px; } }
+
+.footer {
+  padding: 10px; }
+
+/*# sourceMappingURL=modules.css.map */

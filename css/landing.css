@@ -1,0 +1,50 @@
+.body {
+  height: 100vh; }
+
+.navbar {
+  height: 5vh;
+  background-color: black; }
+  .navbar .navbar-brand {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600; }
+  .navbar .link {
+    color: #056609 !important;
+    font-size: 16px;
+    font-weight: 300; }
+
+.jumbotron {
+  height: 100vh;
+  background-image: url("../images/landingimage4.jpeg");
+  background-size: cover;
+  padding: 0;
+  margin: 0;
+  position: relative; }
+  .jumbotron .centered {
+    position: absolute;
+    top: 60%;
+    left: 30%;
+    transform: translate(-20%, -40%);
+    color: white; }
+    .jumbotron .centered h3 {
+      font-weight: 600;
+      font-size: 40px; }
+      @media screen and (max-width: 468px) {
+        .jumbotron .centered h3 {
+          font-size: 24px; } }
+    .jumbotron .centered h4 {
+      font-size: 20px;
+      color: white;
+      font-weight: 600; }
+      @media screen and (max-width: 468px) {
+        .jumbotron .centered h4 {
+          font-size: 16px; } }
+    .jumbotron .centered .btn {
+      margin-top: 24px;
+      background-color: transparent;
+      color: #fff;
+      border: 1px solid #fff;
+      font-size: 16px;
+      font-weight: 300; }
+
+/*# sourceMappingURL=landing.css.map */

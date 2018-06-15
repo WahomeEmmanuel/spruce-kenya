@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Spruce Kenya</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/modules.css">
+
+    <!-- Loads map -->
+    <link rel="stylesheet" type="text/css" href="https://js.cit.api.here.com/v3/3.0/mapsjs-ui.css?dp-version=1526040296" />
+    <script type="text/javascript" src="https://js.cit.api.here.com/v3/3.0/mapsjs-core.js"></script>
+    <script type="text/javascript" src="https://js.cit.api.here.com/v3/3.0/mapsjs-service.js"></script>
+    <script type="text/javascript" src="https://js.cit.api.here.com/v3/3.0/mapsjs-ui.js"></script>
+    <script type="text/javascript" src="https://js.cit.api.here.com/v3/3.0/mapsjs-mapevents.js"></script>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">Spruce Kenya</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a class="active" href="#portfolio">PORTFOLIO</a></li>
+        <li><a href="#pricing">PRICING</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- Container (Statistics Section) -->
+<div id="statistics" class="container-fluid statistics">
+    <div class="row">
+        <div class="statistics__map col-sm-5">
+            <div id="map" class="statistics__map--display"></div>
+            <script  type="text/javascript" charset="UTF-8" >
+
+                /**
+                 * Moves the map to display over Berlin
+                 *
+                 * @param  {H.Map} map      A HERE Map instance within the application
+                 */
+                function moveMapToBerlin(map){
+
+                    map.setCenter({lat:-0.394248, lng:36.963119});
+                    map.setZoom(14);
+                }
+
+
+
+                /**
+                 * Boilerplate map initialization code starts below:
+                 */
+
+                //Step 1: initialize communication with the platform
+                var platform = new H.service.Platform({
+                    app_id: 'yCCTWvLYyTGxqkmT1pUz',
+                    app_code: 'iGxOmwaHmDqZC8cxJIwJsg',
+                    useCIT: true,
+                    useHTTPS: true
+                });
+                var pixelRatio = window.devicePixelRatio || 1;
+                var defaultLayers = platform.createDefaultLayers({
+                    tileSize: pixelRatio === 1 ? 256 : 512,
+                    ppi: pixelRatio === 1 ? undefined : 320
+                });
+
+                //Step 2: initialize a map  - not specificing a location will give a whole world view.
+                var map = new H.Map(document.getElementById('map'),
+                    defaultLayers.normal.map, {pixelRatio: pixelRatio});
+
+                //Step 3: make the map interactive
+                // MapEvents enables the event system
+                // Behavior implements default interactions for pan/zoom (also on mobile touch environments)
+                var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
+
+                // Create the default UI components
+                var ui = H.ui.UI.createDefault(map, defaultLayers);
+
+                // Now use the map as required...
+                moveMapToBerlin(map);
+            </script>
+        </div>
+        <div class="statistics__data col-sm-7">
+            <div class="container">
+                <h3 class="text-center">Nyeri County</h3>
+                <ul class="nav nav-pills">
+                    <li class="active"><a data-toggle="pill" href="#home">Forest</a></li>
+                    <li><a data-toggle="pill" href="#menu1">Forest Change</a></li>
+                    <li><a data-toggle="pill" href="#menu2">Regions</a></li>
+                </ul>
+
+                <div class="tab-content">
+                    <div id="home" class="tab-pane fade in active">
+                        <h3>HOME</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                    <div id="menu1" class="tab-pane fade">
+                        <h3>Menu 1</h3>
+                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                    <div id="menu2" class="tab-pane fade">
+                        <h3>Menu 2</h3>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!--<footer class="container-fluid text-center footer">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+</footer>
+-->
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+</body>
+</html>
+

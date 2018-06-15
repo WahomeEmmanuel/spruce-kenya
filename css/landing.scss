@@ -1,0 +1,65 @@
+.body{
+  height: 100vh;
+}
+
+.navbar{
+  height: 5vh;
+  background-color: black;
+
+  .navbar-brand{
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  .link{
+      color: #056609 !important;
+      font-size: 16px;
+      font-weight: 300;
+  }
+}
+.jumbotron{
+  height: 100vh;
+  background-image: url('../images/landingimage4.jpeg');
+  background-size: cover;
+  padding: 0;
+  margin: 0;
+  position: relative;
+
+
+  .centered {
+    position: absolute;
+    top: 60%;
+    left: 30%;
+    transform: translate(-20%, -40%);
+    color: white;
+
+    h3{
+      font-weight: 600;
+      font-size: 40px;
+
+      @media screen and (max-width: 468px){
+        font-size: 24px;
+      }
+    }
+
+    h4{
+      font-size: 20px;
+      color: white;
+      font-weight: 600;
+      @media screen and (max-width: 468px){
+      font-size: 16px;
+    }
+    }
+
+    .btn{
+      margin-top: 24px;
+      background-color: transparent;
+      color: #fff;
+      border: 1px solid #fff;
+      font-size: 16px;
+      font-weight: 300;
+
+    }
+  }
+}
