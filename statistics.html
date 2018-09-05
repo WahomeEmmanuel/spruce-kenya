@@ -22,7 +22,7 @@
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav style="background-color: #056609;" class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -30,13 +30,14 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#myPage">Spruce Kenya</a>
+      <a style="font-size: 24px;font-weight: 600;" class="navbar-brand" href="#myPage">Spruce Kenya</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a class="active" href="#portfolio">PORTFOLIO</a></li>
-        <li><a href="#pricing">PRICING</a></li>
-        <li><a href="#contact">CONTACT</a></li>
+      <ul  style=" font-size: 16px;" class="nav navbar-nav navbar-right">
+        <li><a class="active" href="#">Campaigns</a></li>
+        <li><a href="#">Competitions</a></li>
+        <li><a href="#">Events</a></li>
+          <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
   </div>
@@ -82,7 +83,7 @@
 
                 //Step 2: initialize a map  - not specificing a location will give a whole world view.
                 var map = new H.Map(document.getElementById('map'),
-                    defaultLayers.normal.map, {pixelRatio: pixelRatio});
+                    defaultLayers.satellite.map, {pixelRatio: pixelRatio});
 
                 //Step 3: make the map interactive
                 // MapEvents enables the event system
@@ -98,7 +99,7 @@
         </div>
         <div class="statistics__data col-sm-7">
             <div class="row">
-                <h3 class="text-center">Nyeri County</h3>
+                <h3 class="text-center county_name">Nyeri County</h3>
                 <ul class="nav nav-pills">
                     <li class="active"><a data-toggle="pill" href="#home">Forest</a></li>
                     <li><a data-toggle="pill" href="#menu1">Forest Loss</a></li>
@@ -107,8 +108,8 @@
 
                 <div class="tab-content">
                     <div id="home" class="tab-pane fade in active">
-                        <div class="tree__cover col-sm-5">
-                        <h3>Tree Cover In Nyeri</h3>
+                        <div class="tree__cover col-sm-6">
+                        <h3 class="tab-pane__title">Tree Cover In Nyeri</h3>
                         <p>As of 2018, 38.03% of Nyeri was tree cover. The top 2 regions represent 64% of all tree cover. Othaya had the most relative tree cover at 61% compared to an average of 45%.</p>
                         </div>
                         <div class="tree__cover--graph col-sm-5">
@@ -117,21 +118,71 @@
                         </div>
                     </div>
                     <div id="menu1" class="tab-pane fade">
-                        <div class="tree__cover">
-                            <h3>Tree Cover Loss In Nyeri</h3>
+                        <div class="tree__cover col-sm-5">
+                            <h3 class="tab-pane__title">Tree Cover Loss In Nyeri</h3>
                             <p>From 2001 to 2016, Nyeri lost 3.96kha of tree cover, equivalent to a 2.3% decrease since 2000.</p>
-                            <p>In Nyeri, the top 6 regions were responsible for 100% of all tree cover loss between 2001 and 2016. Tetu had the most relative tree cover loss at 2.7% compared to an average of 2.1%.</p>
-                            <div id="drawChart2_div" style="width: 800px; height: 500px;"></div>
+                        </div>
+                        <div class="tree__cover--graph col-sm-6">
+                            <div id="columnchartMaterial" style="width: 100%; height: 300px;"></div>
                             <script type="text/javascript" src="js/nyeri-cover-loss.js"></script>
                         </div>
                     </div>
                     <div id="menu2" class="tab-pane fade">
-                        <h3>Menu 2</h3>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                        <h3 class="tab-pane__title">Forest cover of regions within Nyeri</h3>
+                        <div class="regions1 col-sm-6">
+                            <p><a href="#"><span class="badge">1</span> Othaya - 61%</a></p>
+                            <p><a href="#"><span class="badge">2</span> Tetu - 61%</a></p>
+                            <p><a href="#"><span class="badge">3</span> Mathira - 52%</a></p>
+                        </div>
+                        <div class="regions1 col-sm-6">
+                            <p><a href="#"><span class="badge">4</span> Kieni - 39%</a></p>
+                            <p><a href="#"><span class="badge">5</span> Nyeri Town - 29%</a></p>
+                            <p><a href="#"><span class="badge">6</span> Mukurweini - 27%</a></p>
+                        </div>
                     </div>
                 </div>
             </div>
 
+        </div>
+    </div>
+</div>
+
+<!-- Container (Statistics Section) -->
+<div id="statistics__recommendation" class="statistics__recommendation">
+    <div class="row">
+        <hr>
+        <div class="col-sm-6 consequences">
+            <h4>Consequences of deforestation in your area</h4>
+            <ul>
+                <li>Soil Erosion</li>
+                <li>Landslides</li>
+                <li>Silting</li>
+                <li>Climate Change</li>
+                <li>Loss of Wild Habitat</li>
+            </ul>
+        </div>
+        <div class="col-sm-6 take-action">
+            <h4 >Recommendations</h4>
+            <ul>
+                <li> Begin by hugging a tree. It’s that easy. This is the quickest way to appreciate the important part it plays in your life.</li>
+                <li>And start planting trees. That’s the sum of the domestic campaign so far. Soon, all the neighbors will be carbon copying each other.</li>
+                <li>When at home, recycle as much as possible. By extension, you are continuing with your proactive exercise in diverting the demand for clearing land.</li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+<!-- Container (Statistics Section) -->
+<div id="recommendation" class="container-fluid recommendation">
+    <div class="row">
+        <div class="quote">
+        <h3 class="text-center">As the forest went, so went the bird. It's an indicator species, representative of what we did to the forests. Having it return is perhaps a sign that the forests and habitat are coming back as well.</h3>
+        <p class="quote__name">David Luneau</p>
+            <h3 class=" more-text" style="color:#fff;"> Trees are sanctuaries. Whoever knows how to speak to them, whoever knows how to listen to them, can learn the truth. They do not preach learning and precepts, they preach undeterred by particulars, the ancient law of life. <br>Reversing deforestation is complicated; planting a tree is simple</h3>
+        </div>
+        <div class="plant__tree--button">
+            <center><a href="" class="btn" role="button">Plant a tree</a></center>
         </div>
     </div>
 </div>

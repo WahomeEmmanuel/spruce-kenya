@@ -13,18 +13,64 @@
   background-color: #fff;
   padding: 0;
   height: 300px; }
+  .statistics .statistics__data .county_name {
+    color: #000000;
+    font-weight: 600; }
   @media screen and (min-width: 768px) {
     .statistics .statistics__data {
       padding-left: 30px; } }
-  @media screen and (min-width: 768px) {
-    .statistics .statistics__data .container .nav-pills {
-      padding-left: 16px;
-      padding-right: 16px; } }
-  .statistics .statistics__data .container .tab-pane h3 {
+  .statistics .statistics__data .container .nav-pills {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center; }
+    @media screen and (min-width: 768px) {
+      .statistics .statistics__data .container .nav-pills {
+        padding-left: 16px;
+        padding-right: 16px; } }
+  .statistics .statistics__data .container .tab-pane__title {
     color: #056609; }
   @media screen and (max-width: 468px) {
     .statistics .statistics__data {
       height: auto; } }
+  .statistics .statistics__data .regions .badge {
+    color: #056609 !important;
+    padding-right: 24px; }
+
+.recommendation {
+  background-image: url("../images/destroy.jpg");
+  background-size: cover;
+  height: 500px; }
+  .recommendation .quote h3 {
+    color: #fff;
+    font-weight: 300;
+    font-size: 20px; }
+    @media screen and (min-width: 768px) {
+      .recommendation .quote h3 {
+        font-weight: 600;
+        font-size: 27px;
+        line-height: 36px; } }
+  .recommendation .quote .quote__name {
+    text-align: center;
+    color: #9ACD32; }
+  .recommendation .quote .more-text {
+    color: #fff;
+    text-align: center; }
+  .recommendation .plant__tree--button .btn {
+    margin-top: 24px;
+    background-color: #056609;
+    color: #fff;
+    padding-right: 24px;
+    padding-left: 24px;
+    border: 2px solid #056609;
+    font-size: 24px;
+    font-weight: 600; }
+
+.statistics__recommendation {
+  padding: 0 !important; }
+  .statistics__recommendation .consequences ul li {
+    list-style-type: none; }
+  .statistics__recommendation .take-action ul li {
+    list-style-type: none; }
 
 .footer {
   padding: 10px; }

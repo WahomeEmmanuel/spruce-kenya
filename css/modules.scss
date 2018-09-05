@@ -17,8 +17,6 @@
       }
     }
 
-
-
   }
 
   .statistics__data{
@@ -26,26 +24,111 @@
     padding: 0;
     height: 300px;
 
+    .county_name{
+      color: #000000;
+      font-weight: 600;
+    }
+
     @media screen and (min-width: 768px){
       padding-left: 30px;
     }
 
     .container{
       .nav-pills{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
         @media screen and (min-width: 768px){
           padding-left: 16px;
           padding-right: 16px;
         }
       }
-      .tab-pane{
-          h3{
-            color: #056609;
-          }
+
+      .tab-pane__title{
+        color: #056609;
       }
+
     }
 
     @media screen and (max-width: 468px){
       height: auto;
+    }
+
+    .regions{
+      .badge{
+        color: #056609 !important;
+        padding-right: 24px;
+      }
+    }
+  }
+}
+
+
+.recommendation{
+
+  background-image: url('../images/destroy.jpg');
+  background-size: cover;
+
+  height: 500px;
+
+  .quote{
+    h3{
+        color: #fff;
+        font-weight: 300;
+        font-size: 20px;
+
+        @media screen and (min-width: 768px){
+          font-weight: 600;
+          font-size: 27px;
+          line-height: 36px;
+        }
+    }
+    .quote__name{
+      text-align: center;
+      color: #9ACD32;
+    }
+
+    .more-text{
+      color: #fff;
+      text-align: center;
+    }
+  }
+
+  .plant__tree--button{
+    .btn{
+      margin-top: 24px;
+      background-color: #056609;
+      color: #fff;
+      padding-right: 24px;
+      padding-left: 24px;
+      border: 2px solid #056609;
+      font-size: 24px;
+      font-weight: 600;
+
+    }
+  }
+}
+
+
+.statistics__recommendation{
+  padding: 0 !important;
+
+  .consequences{
+    ul{
+
+
+      li{
+        list-style-type: none;
+      }
+    }
+  }
+
+  .take-action{
+    ul{
+
+      li{
+        list-style-type: none;
+      }
     }
   }
 }
